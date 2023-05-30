@@ -206,3 +206,10 @@ footer{
     max-width: 100px;
     height: auto;
 }
+.canchinh{
+    display: flex;
+}
+.canchinh a{
+    color: #333;
+	text-decoration: none;
+}
