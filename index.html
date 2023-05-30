@@ -15,10 +15,10 @@
           <thead>
             <tr>
               <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-              <th><img src="img/delivery.png" alt="Ảnh" class="image3"></th>
-              <th><img src="img/logo.png" alt="Ảnh" class="image6"></th>
+              <th><img src="delivery.png" alt="Ảnh" class="image3"></th>
+              <th><img src="logo.png" alt="Ảnh" class="image6"></th>
               <th>
-                <button type="submit" class="gio">Giỏ hàng <img src="img/trolley-icon.png" alt="Ảnh" class="image4"></button>
+                <button type="submit" class="gio">Giỏ hàng <img src="trolley-icon.png" alt="Ảnh" class="image4"></button>
               </th>
             </tr>
           </thead>
@@ -42,15 +42,15 @@
     <div class="slideshow-container">
 
       <div class="mySlides fade">
-        <a href="sanpham1.html"><img src="img/thumb-banner.png" style="width: 1920px;"></a>
+        <a href="sanpham1.html"><img src="thumb-banner.png" style="width: 1920px;"></a>
       </div>
       
       <div class="mySlides fade">
-        <a href="sanpham1.html"><img src="img/thumb-banner-4-extra.png" style="width: 1920px"></a>
+        <a href="sanpham1.html"><img src="thumb-banner-4-extra.png" style="width: 1920px"></a>
       </div>
       
       <div class="mySlides fade">
-        <a href="sanpham1.html"><img src="img/thumb-banner-3.png" style="width: 1920px"></a>
+        <a href="sanpham1.html"><img src="thumb-banner-3.png" style="width: 1920px"></a>
       </div>
       
       </div>
@@ -62,27 +62,7 @@
         <span class="dot"></span> 
       </div>
       
-      <script>
-      let slideIndex = 0;
-      showSlides();
       
-      function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 3000); // Change image every 2 seconds
-      }
-      </script>
 
     <br><br><br><br><br>
     <table>
@@ -90,7 +70,7 @@
             <thead>
               <tr>
                 <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-                <th><img src="img/content-1.png" alt="Ảnh" class="image2"></th>
+                <th><img src="content-1.png" alt="Ảnh" class="image2"></th>
                 <th>
                     <h2>TỪ NHỮNG MẦM TRÀ, CHÚNG TÔI TẠO RA<br> NIỀM ĐAM MÊ</h2>
             <p>Trải qua hơn 50 năm chắt chiu tinh hoa từ những búp trà xanh và hạt cà <br> phê thượng hạng cùng mong muốn 
@@ -121,7 +101,7 @@
                     <button class="csw-btn-button3" type="submit">Gia nhập đội ngũ An Yên</button>
                 </form>
                 </th>
-                <th><img src="img/content-2.png" alt="Ảnh" class="image5"></th>
+                <th><img src="content-2.png" alt="Ảnh" class="image5"></th>
               </tr>
             </thead>
           </table>
@@ -155,5 +135,28 @@
           </table>
         </footer>
     </table>
+
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
+      }
+      </script>
 </body>
 </html>
