@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thanh toán sản phẩm</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+    * {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    font-size: larger;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+form label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+form input, form button, form select {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: none;
+}
+
+form button {
+    font-size: large;
+	background-color: rgb(151, 6, 6);
+	color: #fff;
+	cursor: pointer;
+}
+form button:hover{
+    font-size: larger;
+}
+
+.product, .invoice {
+	margin-top: 20px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.product img {
+	float: left;
+	margin-right: 20px;
+	border-radius: 5px;
+}
+
+.product h2 {
+	margin-top: 0;
+}
+
+.invoice h2 {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.invoice p:last-child {
+	margin-top: 10px;
+	font-weight: bold;
+}
+.nhap2{
+    color: black;
+    display: flex;
+      padding-left: 2em;
+      text-align: left;
+      font-family: sans-serif;
+      text-decoration: none;
+}
+
+</style>
+<body>
+    <table class="hidden-table3">
+        <thead>
+          <tr>
+            <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+            <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="delivery.png" alt="Ảnh" class="image3"></th>
+            <th><img src="logo.png" alt="Ảnh" class="image6"></th>
+            <th>
+            </th>
+          </tr>
+        </thead>
+      </table>
+      <a href="index.html" class="nhap2"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i><b>&nbspQuay Lại Trang Chủ</b> </a>	
+	<div class="container">
+		<h1>Thanh toán sản phẩm</h1>
+		<form>
+			<label>Tên:</label>
+			<input type="text" placeholder="Nhập tên của bạn" required>
+			<label>Địa chỉ:</label>
+			<input type="text" placeholder="Nhập địa chỉ của bạn" required>
+			<label>Thành phố:</label>
+			<input type="text" placeholder="Nhập thành phố của bạn" required>
+			<label>Quốc gia:</label>
+			<input type="text" placeholder="Nhập quốc gia của bạn" required>
+			<label>Mã bưu điện:</label>
+			<input type="text" placeholder="Nhập mã bưu điện của bạn" required>
+			<label>Số điện thoại:</label>
+			<input type="tel" placeholder="Nhập số điện thoại của bạn" required>
+			<label>Email:</label>
+			<input type="email" placeholder="Nhập địa chỉ email của bạn" required>
+			<label>Phương thức thanh toán:</label>
+			<select>
+				<option value="nganluong">Thanh toán bằng tiền mặt</option>
+                <option value="nganluong">Ví ZaloPay</option>
+                <option value="nganluong">Ví Moca trên ứng dụng Grab</option>
+                <option value="nganluong">VnPAY</option>
+                <option value="nganluong">Ví ShopeePay</option>
+                <option value="nganluong">Ví MoMo</option>
+                <option value="nganluong">ATM/internet Banking</option>
+                <option value="nganluong">Visa/Master/JCB</option>
+				<option value="paypal">PayPal</option>
+				<option value="banktransfer">Chuyển khoản ngân hàng</option>
+			</select>
+
+				<button onclick="window.location.href = 'thanhcong.html';">Thanh toán</button>
+			
+		</form>
+
+		<div class="product">
+			<img src="https://via.placeholder.com/150x150" alt="Product image">
+			<h2>Tên sản phẩm</h2>
+			<p>Giá tiền: $100</p>
+			<p>Số lượng: 1</p>
+		</div>
+		<div class="invoice">
+			<h2>Hóa đơn thanh toán</h2>
+			<p>Tên sản phẩm: Tên sản phẩm</p>
+			<p>Giá tiền: $100</p>
+			<p>Số lượng: 1</p>
+			<p>Tổng tiền: $100</p>
+		</div>
+	</div>
+</body>
+</html>
