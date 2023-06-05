@@ -15,7 +15,7 @@ header {
   
   .search input[type="text"] {
     border: none;
-    font-size: 18px;
+    font-size: 14px;
     margin-right: 10px;
     width: 450px;
   }
@@ -28,7 +28,6 @@ header {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 18px;
     border-radius: 20px;
     cursor: pointer;
   }
@@ -40,7 +39,7 @@ header {
       list-style: none;
   }
   li a {
-    font-size: large;
+
       color: #333;
       text-decoration: none;
   }
@@ -191,7 +190,7 @@ table{
 }
 .nhap2{
     color: black;
-    display: flex;
+
       padding-left: 2em;
       text-align: left;
       font-family: sans-serif;
@@ -202,3 +201,33 @@ table{
     height: auto;
     width: 50px;
   }
+  .image4{
+    max-width: 20px;
+    height: auto;
+}
+
+  @media only screen and (max-width: 46.1875em){
+    .search{
+      width: 250px;
+    }
+    .nhap2{
+      font-size: small;
+    }
+    .hidden-table{
+      width: 50%;
+      font-size: small;
+    } 
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375){
+  .search{
+    width: 300px;
+  }
+  .nhap2{
+    font-size: medium;
+  }
+  .hidden-table{
+    width: 70%;
+    font-size: medium;
+  }
+}

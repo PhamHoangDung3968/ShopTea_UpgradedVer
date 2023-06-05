@@ -226,6 +226,7 @@ footer{
     }
     .hidden-table{
         font-size: small;
+        width: 50%;
     }
     .csw-btn-button{
     width: 100px;
@@ -248,7 +249,8 @@ footer{
     height: 350px;
     }
     .hidden-table{
-        font-size: small;
+        font-size: medium;
+        width: 70%;
     }
     .image5{
         max-width: 350px;
