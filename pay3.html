@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thanh toán sản phẩm</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+    * {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    font-size: larger;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+form label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+form input, form button, form select {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: none;
+}
+
+form button {
+    font-size: large;
+	background-color: rgb(151, 6, 6);
+	color: #fff;
+	cursor: pointer;
+}
+form button:hover{
+    font-size: larger;
+}
+
+.product, .invoice {
+	margin-top: 20px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.product img {
+	float: left;
+	margin-right: 20px;
+	border-radius: 5px;
+}
+
+.product h2 {
+	margin-top: 0;
+}
+
+.invoice h2 {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.invoice p:last-child {
+	margin-top: 10px;
+	font-weight: bold;
+}
+.nhap2{
+    color: black;
+    display: flex;
+      padding-left: 2em;
+      text-align: left;
+      font-family: sans-serif;
+      text-decoration: none;
+}
+.ReturnPage p{
+  color: black;
+	text-decoration: none;
+  text-align: center;
+}
+.ReturnPage p a{
+  color: grey;
+	text-decoration: none;
+  text-align: center;
+}
+.loading{
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000000;
+  display: block;
+  overflow: hidden; /*mờ màn hình*/
+  opacity: 0.9;
+}
+.loading img{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -75px;
+  margin-left: -75px;
+}
+
+</style>
+<body class="preloading">
+	<div class="loading">
+		<img src="loader.gif">
+	</div>
+    <table class="hidden-table3">
+        <thead>
+          <tr>
+            <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+            <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="delivery.png" alt="Ảnh" class="image3"></th>
+            <th><img src="logo.png" alt="Ảnh" class="image6"></th>
+            <th>
+            </th>
+          </tr>
+        </thead>
+      </table>
+	  <div class="ReturnPage">
+		<p><a href="index.html">Trang chủ</a> / <a href="menu.html">Menu</a> / <a href="sanpham1.html">Sản phẩm 1</a> / <a href="pay.html">Thanh Toán</a></p>
+		
+	  </div>	
+	  <div class="container">
+		<h1>Thanh toán sản phẩm</h1>
+		<form>
+			<label>Tên:</label>
+			<input type="text" placeholder="Nhập tên của bạn" required>
+			<label>Địa chỉ:</label>
+			<input type="text" placeholder="Nhập địa chỉ của bạn" required>
+			<label>Thành phố:</label>
+			<input type="text" placeholder="Nhập thành phố của bạn" required>
+			<label>Quốc gia:</label>
+			<input type="text" placeholder="Nhập quốc gia của bạn" required>
+			<label>Mã bưu điện:</label>
+			<input type="text" placeholder="Nhập mã bưu điện của bạn" required>
+			<label>Số điện thoại:</label>
+			<input type="tel" placeholder="Nhập số điện thoại của bạn" required>
+			<label>Email:</label>
+			<input type="email" placeholder="Nhập địa chỉ email của bạn" required>
+			<label>Phương thức thanh toán:</label>
+			<select>
+				<option value="nganluong">Thanh toán bằng tiền mặt</option>
+                <option value="nganluong">Ví ZaloPay</option>
+                <option value="nganluong">Ví Moca trên ứng dụng Grab</option>
+                <option value="nganluong">VnPAY</option>
+                <option value="nganluong">Ví ShopeePay</option>
+                <option value="nganluong">Ví MoMo</option>
+                <option value="nganluong">ATM/internet Banking</option>
+                <option value="nganluong">Visa/Master/JCB</option>
+				<option value="paypal">PayPal</option>
+				<option value="banktransfer">Chuyển khoản ngân hàng</option>
+			</select>
+
+				<button onclick="window.location.href = 'thanhcong.html';">Thanh toán</button>
+			
+		</form>
+
+		<div class="product">
+			<img src="https://via.placeholder.com/150x150" alt="Product image">
+			<h2>Tên sản phẩm</h2>
+			<p>Giá tiền: $100</p>
+			<p>Số lượng: 1</p>
+		</div>
+		<div class="invoice">
+			<h2>Hóa đơn thanh toán</h2>
+			<p>Tên sản phẩm: Tên sản phẩm</p>
+			<p>Giá tiền: $100</p>
+			<p>Số lượng: 1</p>
+			<p>Tổng tiền: $100</p>
+		</div>
+	</div>
+	<footer>
+		<table class="hidden-table">
+		  <thead>
+			<tr>
+			  <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+			  <th>
+				  <p id="call"><b>+Trụ sở chính:</b> Công ty Cổ Phần An Yên Heritage - ĐKKD: 0316 871719<br>
+					  do sở KHĐT TPHCM cấp lần đầu ngày 21/05/2021<br><br>
+					  <b>+Nhà máy:</b> D_8D_CN Đường XE 1, Khu Công Nghiệp Mỹ Phước III, phường Mỹ Phước,<br> thị xã Bến Cát, tỉnh Bình Dương, Việt Nam<br><br>
+					  <b>+Địa chỉ:</b> Phòng 702, Tầng 7, Tòa nhà Central Plaza, số 17 Lê Duẩn, phường Bến Nghé,<br> quận 1, Hồ Chí Minh<br><br>
+					  <b>+Điện thoại:</b> 1900 234 518 (Ext.9100/ 9102)<br><br>
+					  <b>+Fax:</b> (028) 6263 0379<br><br>
+					  <b>+Email:</b> sales@anyen.masangroup.com<br>
+					  &nbsp&nbspinfo2@anyen.masangroup.com<br></p>
+			  </th>
+			  <th>
+				  <h5 id="call">Đăng ký nhận tin khuyến mãi</h5>
+				  <div>
+					<input class="input1" id="hello" type="text" placeholder="Nhập địa chỉ Email">
+					<button type="submit">Gửi</button>
+				  </div>
+				  <h5 id="call">Chính sách đặt hàng</h5>
+				  <h5 id="call">Chính sách bảo mật thông tin</h5>
+			  </th>
+			</tr>
+		  </thead>
+		</table>
+	  </footer>
+	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(window).on('load', function(event){
+        $('body').removeClass('preloading');
+        $('.loading').delay(1300).fadeOut('fast');
+    });
+  </script>
+</body>
+</html>

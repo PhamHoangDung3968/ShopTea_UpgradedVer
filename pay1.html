@@ -89,9 +89,43 @@ form button:hover{
       font-family: sans-serif;
       text-decoration: none;
 }
+.ReturnPage p{
+  color: black;
+	text-decoration: none;
+  text-align: center;
+}
+.ReturnPage p a{
+  color: grey;
+	text-decoration: none;
+  text-align: center;
+}
+.loading{
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000000;
+  display: block;
+  overflow: hidden; /*mờ màn hình*/
+  opacity: 0.9;
+}
+.loading img{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -75px;
+  margin-left: -75px;
+}
 
 </style>
-<body>
+<body class="preloading">
+	<div class="loading">
+		<img src="loader.gif">
+	</div>
     <table class="hidden-table3">
         <thead>
           <tr>
@@ -103,8 +137,11 @@ form button:hover{
           </tr>
         </thead>
       </table>
-      <a href="index.html" class="nhap2"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i><b>&nbspQuay Lại Trang Chủ</b> </a>	
-	<div class="container">
+	  <div class="ReturnPage">
+		<p><a href="index.html">Trang chủ</a> / <a href="menu.html">Menu</a> / <a href="sanpham1.html">Sản phẩm 1</a> / <a href="pay.html">Thanh Toán</a></p>
+		
+	  </div>	
+	  <div class="container">
 		<h1>Thanh toán sản phẩm</h1>
 		<form>
 			<label>Tên:</label>
@@ -153,5 +190,40 @@ form button:hover{
 			<p>Tổng tiền: $100</p>
 		</div>
 	</div>
+	<footer>
+		<table class="hidden-table">
+		  <thead>
+			<tr>
+			  <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+			  <th>
+				  <p id="call"><b>+Trụ sở chính:</b> Công ty Cổ Phần An Yên Heritage - ĐKKD: 0316 871719<br>
+					  do sở KHĐT TPHCM cấp lần đầu ngày 21/05/2021<br><br>
+					  <b>+Nhà máy:</b> D_8D_CN Đường XE 1, Khu Công Nghiệp Mỹ Phước III, phường Mỹ Phước,<br> thị xã Bến Cát, tỉnh Bình Dương, Việt Nam<br><br>
+					  <b>+Địa chỉ:</b> Phòng 702, Tầng 7, Tòa nhà Central Plaza, số 17 Lê Duẩn, phường Bến Nghé,<br> quận 1, Hồ Chí Minh<br><br>
+					  <b>+Điện thoại:</b> 1900 234 518 (Ext.9100/ 9102)<br><br>
+					  <b>+Fax:</b> (028) 6263 0379<br><br>
+					  <b>+Email:</b> sales@anyen.masangroup.com<br>
+					  &nbsp&nbspinfo2@anyen.masangroup.com<br></p>
+			  </th>
+			  <th>
+				  <h5 id="call">Đăng ký nhận tin khuyến mãi</h5>
+				  <div>
+					<input class="input1" id="hello" type="text" placeholder="Nhập địa chỉ Email">
+					<button type="submit">Gửi</button>
+				  </div>
+				  <h5 id="call">Chính sách đặt hàng</h5>
+				  <h5 id="call">Chính sách bảo mật thông tin</h5>
+			  </th>
+			</tr>
+		  </thead>
+		</table>
+	  </footer>
+	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(window).on('load', function(event){
+        $('body').removeClass('preloading');
+        $('.loading').delay(1300).fadeOut('fast');
+    });
+  </script>
 </body>
 </html>

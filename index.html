@@ -8,7 +8,10 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     </head>
 </head>
-<body>
+<body class="preloading">
+  <div class="loading">
+    <img src="LoaderHomePage.gif">
+</div>
 	<header>
     <table>
       <table class="hidden-table3">
@@ -20,7 +23,10 @@
               <th>
                 <div class="canchinh">
                   <a href="login.html">Đăng nhập &nbsp&nbsp</a>
-                <button type="submit" class="gio">Giỏ hàng <img src="trolley-icon.png" alt="Ảnh" class="image4"></button>
+                
+                <form action="giohang.html">
+                  <button type="submit" class="gio">Giỏ hàng <img src="trolley-icon.png" alt="Ảnh" class="image4"></button>
+              </form>
               </div>
               </th>
             </tr>
@@ -164,5 +170,13 @@
         setTimeout(showSlides, 3000);
       }
       </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(window).on('load', function(event){
+        $('body').removeClass('preloading');
+        $('.loading').delay(1500).fadeOut('fast');
+    });
+</script>
 </body>
 </html>

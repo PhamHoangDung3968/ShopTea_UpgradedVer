@@ -8,7 +8,7 @@
 .loading{
     width: 100%;
     height: 100%;
-    background: #000;
+    background: white;
     position: fixed;
     top: 0;
     left: 0;
@@ -18,8 +18,8 @@
     opacity: 0.8; /*mờ màn hình*/
 }
 .loading img{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     position: absolute;
     top: 50%;
     left: 50%;
