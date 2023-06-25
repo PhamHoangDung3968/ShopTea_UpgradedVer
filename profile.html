@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style8.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body class="preloading">
+  <div class="loading">
+    <img src="loader.gif">
+</div>
+  <a href="sanpham1.html"><img src="thumb-banner.png" style="width: 100%; margin-top: 10px;"></a>
+    <div class="nhap">
+        <h4><a href="index.html">Trang chủ</a> / <a href="">Về chúng tôi</a></h4>
+        <h2 style="margin-top: 7%;">Về chúng tôi</h2>
+    </div>
+    
+    <div class="content">
+      
+        <div class="card">
+            <div class="card__img">
+                <img src="HD.JPG" alt="">
+            </div>
+            <h2>Phạm Hoàng Dũng</h2>
+            <p>Leader</p>
+            <div class="card__social">
+                <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href=""><ion-icon name="logo-github"></ion-icon></a>
+            </div>
+            <button>Contact me</button>
+        </div>
+    <br>
+        <div class="card">
+            <div class="card__img">
+                <img src="AH.jpg" alt="">
+            </div>
+            <h2>Nguyễn Vũ Anh Hoàng</h2>
+            <p>Member</p>
+            <div class="card__social">
+                <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href=""><ion-icon name="logo-github"></ion-icon></a>
+            </div>
+            <button>Contact me</button>
+        </div>
+    </div>
+    <div id="backtop">
+      <i class="fas fa-chevron-up fa-2x"></i>
+    </div>
+    
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(window).on('load', function(event){
+        $('body').removeClass('preloading');
+        $('.loading').delay(1500).fadeOut('fast');
+    });
+</script>
+<script>
+  $(document).ready(function(){
+    $(window).scroll(function(){
+      if($(this).scrollTop()){
+        $('#backtop').fadeIn();
+      }else{
+        $('#backtop').fadeOut();
+      }
+    });
+    $("#backtop").click(function(){
+      $('html, body').animate({scrollTop: 0}, 500)
+    });
+  });
+</script>
+</body>
+</html>

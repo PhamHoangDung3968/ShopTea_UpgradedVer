@@ -7,7 +7,7 @@ body {
 }
 
 .layout_padding {
-  padding: 90px 0;
+  padding: 10px 0;
 }
 
 .layout_padding2 {
@@ -1183,4 +1183,17 @@ cursor: pointer;
 }
 .detail-box h5 a:hover{
   color: yellow;
+}
+#backtop{
+  width: 50px;
+  height: 50px;
+
+  color: #0C713D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  cursor: pointer;
 }

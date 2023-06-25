@@ -36,10 +36,9 @@
 		<nav>
 			<ul>
 				<li><a href="index.html"><b>TRANG CHỦ&nbsp&nbsp</b></a></li>
-				<li><a href="#"><b>THỨC UỐNG&nbsp&nbsp </b></a></li>
         <li><a href="menu.html"><b>SẢN PHẨM&nbsp&nbsp</b></a></li>
-        <li><a href="#"><b>KHUYẾN MÃI&nbsp&nbsp</b></a></li>
-        <li><a href="#"><b>VỀ CHÚNG TÔI</b></a></li>
+        <li><a href="Khuyenmai.html"><b>KHUYẾN MÃI&nbsp&nbsp</b></a></li>
+        <li><a href="profile.html"><b>VỀ CHÚNG TÔI</b></a></li>
         <li><a href="#"><div class="search-icon"><i class="fas fa-search"></i></div></a></li>
 			</ul>
 		</nav>
@@ -148,7 +147,9 @@
         </footer>
     </table>
 
-
+<div id="backtop">
+  <i class="fas fa-chevron-up fa-2x"></i>
+</div>
     <script>
       let slideIndex = 0;
       showSlides();
@@ -176,6 +177,20 @@
     $(window).on('load', function(event){
         $('body').removeClass('preloading');
         $('.loading').delay(1500).fadeOut('fast');
+    });
+</script>
+<script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        if($(this).scrollTop()){
+          $('#backtop').fadeIn();
+        }else{
+          $('#backtop').fadeOut();
+        }
+      });
+      $("#backtop").click(function(){
+        $('html, body').animate({scrollTop: 0}, 500)
+      });
     });
 </script>
 </body>

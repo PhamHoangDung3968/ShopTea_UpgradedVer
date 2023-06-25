@@ -263,3 +263,16 @@ table{
   margin-top: -75px;
   margin-left: -75px;
 }
+#backtop{
+  width: 50px;
+  height: 50px;
+
+  color: #0C713D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  cursor: pointer;
+}

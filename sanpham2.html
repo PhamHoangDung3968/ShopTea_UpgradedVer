@@ -23,7 +23,7 @@
 		</header>
 		<br><br>
 		<div class="ReturnPage">
-			<p><a href="index.html">Trang chủ</a> / <a href="menu.html">Menu</a> / <a href="sanpham2.html">Sản phẩm 2</a></p>
+			<p><a href="index.html">Trang chủ</a> / <a href="menu.html">Menu</a> / <a href="sanpham1.html">Sản phẩm 1</a></p>
 			
 		  </div>
 		<div class="container">
@@ -32,7 +32,7 @@
 			<h1 class="product-title">Trà Hoa Đường Phèn</h1>
 			<p class="product-price">69,000 vnd</p>
 			<p class="product-description">Trà Hoa Cúc Đường Phèn là trà hoa cúc khô nguyên bông được bọc trong đường phèn. Rất tốt cho sức khỏe, dễ pha dễ uống. Thơm ngon.</p>
-			<form action="pay2.html">
+			<form action="pay1.html">
 				<button class="add-to-cart">Mua ngay</button>
 			</form>
 		</div>
@@ -90,6 +90,9 @@
 		  </thead>
 		</table>
 	  </footer>
+	  <div id="backtop">
+		<i class="fas fa-chevron-up fa-2x"></i>
+	  </div>
 	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(window).on('load', function(event){
@@ -97,5 +100,19 @@
         $('.loading').delay(1300).fadeOut('fast');
     });
   </script>
+  <script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        if($(this).scrollTop()){
+          $('#backtop').fadeIn();
+        }else{
+          $('#backtop').fadeOut();
+        }
+      });
+      $("#backtop").click(function(){
+        $('html, body').animate({scrollTop: 0}, 500)
+      });
+    });
+</script>
 </body>
 </html>

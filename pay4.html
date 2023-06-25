@@ -42,7 +42,7 @@ form input, form button, form select {
 	padding: 10px;
 	margin-bottom: 20px;
 	border-radius: 5px;
-	border: none;
+
 }
 
 form button {
@@ -119,6 +119,19 @@ form button:hover{
   left: 50%;
   margin-top: -75px;
   margin-left: -75px;
+}
+#backtop{
+    width: 50px;
+    height: 50px;
+
+    color: #0C713D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    cursor: pointer;
 }
 
 </style>
@@ -218,6 +231,9 @@ form button:hover{
 		  </thead>
 		</table>
 	  </footer>
+	  <div id="backtop">
+		<i class="fas fa-chevron-up fa-2x"></i>
+	  </div>
 	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(window).on('load', function(event){
@@ -225,5 +241,19 @@ form button:hover{
         $('.loading').delay(1300).fadeOut('fast');
     });
   </script>
+  <script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        if($(this).scrollTop()){
+          $('#backtop').fadeIn();
+        }else{
+          $('#backtop').fadeOut();
+        }
+      });
+      $("#backtop").click(function(){
+        $('html, body').animate({scrollTop: 0}, 500)
+      });
+    });
+</script>
 </body>
 </html>

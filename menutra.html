@@ -476,6 +476,9 @@
       </div>
     </div>
   </footer>
+  <div id="backtop">
+		<i class="fas fa-chevron-up fa-2x"></i>
+	  </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(window).on('load', function(event){
@@ -483,6 +486,20 @@
         $('.loading').delay(1300).fadeOut('fast');
     });
   </script>
+  <script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        if($(this).scrollTop()){
+          $('#backtop').fadeIn();
+        }else{
+          $('#backtop').fadeOut();
+        }
+      });
+      $("#backtop").click(function(){
+        $('html, body').animate({scrollTop: 0}, 500)
+      });
+    });
+</script>
 </body>
 
 </html>
